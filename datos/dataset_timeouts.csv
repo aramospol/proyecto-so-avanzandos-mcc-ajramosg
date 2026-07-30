@@ -1,146 +1,304 @@
-id,proyecto,version_doc,parametro,valor_original,unidad_original,valor_ms,es_valor_especial,tipo_timeout,fuente_url
-1,zookeeper,3.9,tickTime,NO_ENCONTRADO,ms,,true,HEARTBEAT_KEEPALIVE,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-2,zookeeper,3.9,initLimit,NO_ENCONTRADO,ticks,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-3,zookeeper,3.9,syncLimit,NO_ENCONTRADO,ticks,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-4,zookeeper,3.9,minSessionTimeout,2 x tickTime,ms,,true,SESSION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-5,zookeeper,3.9,maxSessionTimeout,20 x tickTime,ms,,true,SESSION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-6,zookeeper,3.9,cnxTimeout,5,s,5000,false,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-7,zookeeper,3.9,quorumCnxnTimeoutMs,-1,ms,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-8,zookeeper,3.9,connectToLearnerMasterLimit,initLimit,ticks,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-9,zookeeper,3.9,maxTimeToWaitForEpoch,NO_ENCONTRADO,ms,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-10,zookeeper,3.9,fsync.warningthresholdms,1000,ms,1000,false,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-11,zookeeper,3.9,requestThrottleStallTime,100,ms,100,false,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-12,zookeeper,3.9,zookeeper.request_throttler.shutdownTimeout,10000,ms,10000,false,SHUTDOWN,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-13,zookeeper,3.9,multiAddress.reachabilityCheckTimeoutMs,1000,ms,1000,false,CONNECT,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-14,zookeeper,3.9,observer.reconnectDelayMs,0,ms,,true,RETRY_BACKOFF,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-15,zookeeper,3.9,observer.election.DelayMs,200,ms,200,false,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-16,zookeeper,3.9,connectionFreezeTime,-1,ms,,true,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-17,zookeeper,3.9,connectionTokenFillTime,1,ms,1,false,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-18,zookeeper,3.9,flushDelay,0,ms,,true,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-19,zookeeper,3.9,maxWriteQueuePollTime,flushDelay/3,ms,,true,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-20,zookeeper,3.9,watcherCleanIntervalInSeconds,10,min,600000,false,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration
-21,tomcat,9.0,connectionTimeout,60000,ms,60000,false,READ_SOCKET,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-22,tomcat,9.0,keepAliveTimeout,connectionTimeout,ms,,true,IDLE,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-23,tomcat,9.0,asyncTimeout,30000,ms,30000,false,REQUEST_RPC,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-24,tomcat,9.0,connectionUploadTimeout,300000,ms,300000,false,READ_SOCKET,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-25,tomcat,9.0,connectionLinger,-1,s,,true,SHUTDOWN,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-26,tomcat,9.0,socket.soLingerTime,NO_ENCONTRADO,s,,true,SHUTDOWN,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-27,tomcat,9.0,socket.soTimeout,connectionTimeout,ms,,true,READ_SOCKET,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-28,tomcat,9.0,selectorTimeout,1000,ms,1000,false,IDLE,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-29,tomcat,9.0,socket.unlockTimeout,250,ms,250,false,SHUTDOWN,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-30,tomcat,9.0,pollTime,2000,microsegundos,,false,OTRO,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-31,tomcat,9.0,threadsMaxIdleTime,60000,ms,60000,false,IDLE,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html
-32,kafka,3.9,zookeeper.session.timeout.ms,18000,ms,18000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_zookeeper.session.timeout.ms
-33,kafka,3.9,zookeeper.connection.timeout.ms,null,ms,,true,CONNECT,https://kafka.apache.org/documentation/#brokerconfigs_zookeeper.connection.timeout.ms
-34,kafka,3.9,connections.max.idle.ms,600000,ms,600000,false,IDLE,https://kafka.apache.org/documentation/#brokerconfigs_connections.max.idle.ms
-35,kafka,3.9,request.timeout.ms,30000,ms,30000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_request.timeout.ms
-36,kafka,3.9,replica.socket.timeout.ms,30000,ms,30000,false,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_replica.socket.timeout.ms
-37,kafka,3.9,replica.fetch.wait.max.ms,500,ms,500,false,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_replica.fetch.wait.max.ms
-38,kafka,3.9,replica.lag.time.max.ms,30000,ms,30000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_replica.lag.time.max.ms
-39,kafka,3.9,replica.fetch.backoff.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_replica.fetch.backoff.ms
-40,kafka,3.9,controller.socket.timeout.ms,30000,ms,30000,false,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_controller.socket.timeout.ms
-41,kafka,3.9,controller.quorum.election.timeout.ms,1000,ms,1000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.election.timeout.ms
-42,kafka,3.9,controller.quorum.fetch.timeout.ms,2000,ms,2000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.fetch.timeout.ms
-43,kafka,3.9,controller.quorum.election.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.election.backoff.max.ms
-44,kafka,3.9,controller.quorum.request.timeout.ms,2000,ms,2000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.request.timeout.ms
-45,kafka,3.9,controller.quorum.retry.backoff.ms,20,ms,20,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.retry.backoff.ms
-46,kafka,3.9,controller.quorum.append.linger.ms,25,ms,25,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.append.linger.ms
-47,kafka,3.9,group.initial.rebalance.delay.ms,3000,ms,3000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_group.initial.rebalance.delay.ms
-48,kafka,3.9,group.min.session.timeout.ms,6000,ms,6000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.min.session.timeout.ms
-49,kafka,3.9,group.max.session.timeout.ms,1800000,ms,1800000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.max.session.timeout.ms
-50,kafka,3.9,group.consumer.session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.session.timeout.ms
-51,kafka,3.9,group.consumer.min.session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.min.session.timeout.ms
-52,kafka,3.9,group.consumer.max.session.timeout.ms,60000,ms,60000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.max.session.timeout.ms
-53,kafka,3.9,group.consumer.heartbeat.interval.ms,5000,ms,5000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.heartbeat.interval.ms
-54,kafka,3.9,group.consumer.min.heartbeat.interval.ms,5000,ms,5000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.min.heartbeat.interval.ms
-55,kafka,3.9,group.consumer.max.heartbeat.interval.ms,15000,ms,15000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.max.heartbeat.interval.ms
-56,kafka,3.9,group.share.session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.session.timeout.ms
-57,kafka,3.9,group.share.min.session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.min.session.timeout.ms
-58,kafka,3.9,group.share.max.session.timeout.ms,60000,ms,60000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.max.session.timeout.ms
-59,kafka,3.9,group.share.heartbeat.interval.ms,5000,ms,5000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.share.heartbeat.interval.ms
-60,kafka,3.9,group.share.min.heartbeat.interval.ms,5000,ms,5000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.share.min.heartbeat.interval.ms
-61,kafka,3.9,group.share.max.heartbeat.interval.ms,15000,ms,15000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.share.max.heartbeat.interval.ms
-62,kafka,3.9,group.share.record.lock.duration.ms,30000,ms,30000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.record.lock.duration.ms
-63,kafka,3.9,group.share.min.record.lock.duration.ms,15000,ms,15000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.min.record.lock.duration.ms
-64,kafka,3.9,group.share.max.record.lock.duration.ms,60000,ms,60000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.max.record.lock.duration.ms
-65,kafka,3.9,group.coordinator.append.linger.ms,10,ms,10,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_group.coordinator.append.linger.ms
-66,kafka,3.9,transaction.max.timeout.ms,900000,ms,900000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_transaction.max.timeout.ms
-67,kafka,3.9,offsets.commit.timeout.ms,5000,ms,5000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_offsets.commit.timeout.ms
-68,kafka,3.9,connections.max.reauth.ms,0,ms,,true,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_connections.max.reauth.ms
-69,kafka,3.9,controlled.shutdown.retry.backoff.ms,5000,ms,5000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_controlled.shutdown.retry.backoff.ms
-70,kafka,3.9,broker.heartbeat.interval.ms,2000,ms,2000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_broker.heartbeat.interval.ms
-71,kafka,3.9,broker.session.timeout.ms,9000,ms,9000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_broker.session.timeout.ms
-72,kafka,3.9,initial.broker.registration.timeout.ms,60000,ms,60000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_initial.broker.registration.timeout.ms
-73,kafka,3.9,remote.fetch.max.wait.ms,500,ms,500,false,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_remote.fetch.max.wait.ms
-74,kafka,3.9,socket.connection.setup.timeout.ms,10000,ms,10000,false,CONNECT,https://kafka.apache.org/documentation/#brokerconfigs_socket.connection.setup.timeout.ms
-75,kafka,3.9,socket.connection.setup.timeout.max.ms,30000,ms,30000,false,CONNECT,https://kafka.apache.org/documentation/#brokerconfigs_socket.connection.setup.timeout.max.ms
-76,kafka,3.9,connection.failed.authentication.delay.ms,100,ms,100,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_connection.failed.authentication.delay.ms
-77,kafka,3.9,log.dir.failure.timeout.ms,30000,ms,30000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.dir.failure.timeout.ms
-78,kafka,3.9,sasl.login.connect.timeout.ms,null,ms,,true,CONNECT,https://kafka.apache.org/documentation/#brokerconfigs_sasl.login.connect.timeout.ms
-79,kafka,3.9,sasl.login.read.timeout.ms,null,ms,,true,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_sasl.login.read.timeout.ms
-80,kafka,3.9,sasl.login.retry.backoff.ms,100,ms,100,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_sasl.login.retry.backoff.ms
-81,kafka,3.9,sasl.login.retry.backoff.max.ms,10000,ms,10000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_sasl.login.retry.backoff.max.ms
-82,kafka,3.9,sasl.oauthbearer.jwks.endpoint.retry.backoff.ms,100,ms,100,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_sasl.oauthbearer.jwks.endpoint.retry.backoff.ms
-83,kafka,3.9,sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms,10000,ms,10000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms
-84,kafka,3.9,sasl.oauthbearer.jwks.endpoint.refresh.ms,3600000,ms,3600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_sasl.oauthbearer.jwks.endpoint.refresh.ms
-85,kafka,3.9,delegation.token.expiry.check.interval.ms,3600000,ms,3600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_delegation.token.expiry.check.interval.ms
-86,kafka,3.9,delegation.token.expiry.time.ms,86400000,ms,86400000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_delegation.token.expiry.time.ms
-87,kafka,3.9,delegation.token.max.lifetime.ms,604800000,ms,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_delegation.token.max.lifetime.ms
-88,kafka,3.9,log.cleaner.backoff.ms,15000,ms,15000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.cleaner.backoff.ms
-89,kafka,3.9,log.cleaner.delete.retention.ms,86400000,ms,86400000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.cleaner.delete.retention.ms
-90,kafka,3.9,log.cleaner.max.compaction.lag.ms,9223372036854775807,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.cleaner.max.compaction.lag.ms
-91,kafka,3.9,log.cleaner.min.compaction.lag.ms,0,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.cleaner.min.compaction.lag.ms
-92,kafka,3.9,log.flush.interval.ms,null,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.flush.interval.ms
-93,kafka,3.9,log.flush.offset.checkpoint.interval.ms,60000,ms,60000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.flush.offset.checkpoint.interval.ms
-94,kafka,3.9,log.flush.scheduler.interval.ms,9223372036854775807,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.flush.scheduler.interval.ms
-95,kafka,3.9,log.flush.start.offset.checkpoint.interval.ms,60000,ms,60000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.flush.start.offset.checkpoint.interval.ms
-96,kafka,3.9,log.local.retention.ms,-2,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.local.retention.ms
-97,kafka,3.9,log.retention.check.interval.ms,300000,ms,300000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.retention.check.interval.ms
-98,kafka,3.9,log.retention.hours,168,h,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.retention.hours
-99,kafka,3.9,log.retention.minutes,null,min,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.retention.minutes
-100,kafka,3.9,log.retention.ms,null,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.retention.ms
-101,kafka,3.9,log.roll.jitter.ms,null,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.roll.jitter.ms
-102,kafka,3.9,log.roll.ms,null,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.roll.ms
-103,kafka,3.9,log.segment.delete.delay.ms,60000,ms,60000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.segment.delete.delay.ms
-104,kafka,3.9,metadata.log.max.snapshot.interval.ms,3600000,ms,3600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_metadata.log.max.snapshot.interval.ms
-105,kafka,3.9,metadata.log.segment.ms,604800000,ms,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_metadata.log.segment.ms
-106,kafka,3.9,metadata.max.idle.interval.ms,500,ms,500,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_metadata.max.idle.interval.ms
-107,kafka,3.9,metadata.max.retention.ms,604800000,ms,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_metadata.max.retention.ms
-108,kafka,3.9,offsets.retention.check.interval.ms,600000,ms,600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_offsets.retention.check.interval.ms
-109,kafka,3.9,offsets.retention.minutes,10080,min,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_offsets.retention.minutes
-110,kafka,3.9,producer.id.expiration.ms,86400000,ms,86400000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_producer.id.expiration.ms
-111,kafka,3.9,remote.log.manager.task.interval.ms,30000,ms,30000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_remote.log.manager.task.interval.ms
-112,kafka,3.9,replica.high.watermark.checkpoint.interval.ms,5000,ms,5000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_replica.high.watermark.checkpoint.interval.ms
-113,kafka,3.9,transaction.abort.timed.out.transaction.cleanup.interval.ms,10000,ms,10000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_transaction.abort.timed.out.transaction.cleanup.interval.ms
-114,kafka,3.9,transaction.remove.expired.transaction.cleanup.interval.ms,3600000,ms,3600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_transaction.remove.expired.transaction.cleanup.interval.ms
-115,kafka,3.9,transactional.id.expiration.ms,604800000,ms,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_transactional.id.expiration.ms
-116,kafka,3.9,request.timeout.ms,30000,ms,30000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#producerconfigs_request.timeout.ms
-117,kafka,3.9,delivery.timeout.ms,120000,ms,120000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#producerconfigs_delivery.timeout.ms
-118,kafka,3.9,linger.ms,0,ms,,true,OTRO,https://kafka.apache.org/documentation/#producerconfigs_linger.ms
-119,kafka,3.9,connections.max.idle.ms,540000,ms,540000,false,IDLE,https://kafka.apache.org/documentation/#producerconfigs_connections.max.idle.ms
-120,kafka,3.9,max.block.ms,60000,ms,60000,false,OTRO,https://kafka.apache.org/documentation/#producerconfigs_max.block.ms
-121,kafka,3.9,transaction.timeout.ms,60000,ms,60000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#producerconfigs_transaction.timeout.ms
-122,kafka,3.9,socket.connection.setup.timeout.ms,10000,ms,10000,false,CONNECT,https://kafka.apache.org/documentation/#producerconfigs_socket.connection.setup.timeout.ms
-123,kafka,3.9,socket.connection.setup.timeout.max.ms,30000,ms,30000,false,CONNECT,https://kafka.apache.org/documentation/#producerconfigs_socket.connection.setup.timeout.max.ms
-124,kafka,3.9,reconnect.backoff.ms,50,ms,50,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#producerconfigs_reconnect.backoff.ms
-125,kafka,3.9,reconnect.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#producerconfigs_reconnect.backoff.max.ms
-126,kafka,3.9,retry.backoff.ms,100,ms,100,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#producerconfigs_retry.backoff.ms
-127,kafka,3.9,retry.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#producerconfigs_retry.backoff.max.ms
-128,kafka,3.9,partitioner.availability.timeout.ms,0,ms,,true,OTRO,https://kafka.apache.org/documentation/#producerconfigs_partitioner.availability.timeout.ms
-129,kafka,3.9,metadata.max.age.ms,300000,ms,300000,false,OTRO,https://kafka.apache.org/documentation/#producerconfigs_metadata.max.age.ms
-130,kafka,3.9,metadata.max.idle.ms,300000,ms,300000,false,IDLE,https://kafka.apache.org/documentation/#producerconfigs_metadata.max.idle.ms
-131,kafka,3.9,session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#consumerconfigs_session.timeout.ms
-132,kafka,3.9,heartbeat.interval.ms,3000,ms,3000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#consumerconfigs_heartbeat.interval.ms
-133,kafka,3.9,request.timeout.ms,30000,ms,30000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#consumerconfigs_request.timeout.ms
-134,kafka,3.9,default.api.timeout.ms,60000,ms,60000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#consumerconfigs_default.api.timeout.ms
-135,kafka,3.9,max.poll.interval.ms,300000,ms,300000,false,SESSION,https://kafka.apache.org/documentation/#consumerconfigs_max.poll.interval.ms
-136,kafka,3.9,fetch.max.wait.ms,500,ms,500,false,READ_SOCKET,https://kafka.apache.org/documentation/#consumerconfigs_fetch.max.wait.ms
-137,kafka,3.9,connections.max.idle.ms,540000,ms,540000,false,IDLE,https://kafka.apache.org/documentation/#consumerconfigs_connections.max.idle.ms
-138,kafka,3.9,socket.connection.setup.timeout.ms,10000,ms,10000,false,CONNECT,https://kafka.apache.org/documentation/#consumerconfigs_socket.connection.setup.timeout.ms
-139,kafka,3.9,socket.connection.setup.timeout.max.ms,30000,ms,30000,false,CONNECT,https://kafka.apache.org/documentation/#consumerconfigs_socket.connection.setup.timeout.max.ms
-140,kafka,3.9,reconnect.backoff.ms,50,ms,50,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#consumerconfigs_reconnect.backoff.ms
-141,kafka,3.9,reconnect.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#consumerconfigs_reconnect.backoff.max.ms
-142,kafka,3.9,retry.backoff.ms,100,ms,100,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#consumerconfigs_retry.backoff.ms
-143,kafka,3.9,retry.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#consumerconfigs_retry.backoff.max.ms
-144,kafka,3.9,metadata.max.age.ms,300000,ms,300000,false,OTRO,https://kafka.apache.org/documentation/#consumerconfigs_metadata.max.age.ms
-145,kafka,3.9,auto.commit.interval.ms,5000,ms,5000,false,OTRO,https://kafka.apache.org/documentation/#consumerconfigs_auto.commit.interval.ms
+id,proyecto,version_doc,parametro,valor_original,unidad_original,valor_ms,es_valor_especial,tipo_timeout,fuente_url,notas
+1,zookeeper,3.9,tickTime,NO_ENCONTRADO,ms,,true,HEARTBEAT_KEEPALIVE,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,doc no fija default oficial; el ejemplo de config usa 2000 pero es ilustrativo
+2,zookeeper,3.9,initLimit,NO_ENCONTRADO,ticks,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,doc no fija default; ejemplo usa 5; unidad ticks -> pendiente normalizacion
+3,zookeeper,3.9,syncLimit,NO_ENCONTRADO,ticks,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,doc no fija default; ejemplo usa 2; unidad ticks
+4,zookeeper,3.9,minSessionTimeout,2 x tickTime,ms,,true,SESSION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,default relativo a tickTime; no numerico -> pendiente
+5,zookeeper,3.9,maxSessionTimeout,20 x tickTime,ms,,true,SESSION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,default relativo a tickTime; no numerico -> pendiente
+6,zookeeper,3.9,cnxTimeout,5,s,5000,false,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,
+7,zookeeper,3.9,quorumCnxnTimeoutMs,-1,ms,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,especial: -1 => deriva de syncLimit*tickTime
+8,zookeeper,3.9,connectToLearnerMasterLimit,initLimit,ticks,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,default relativo a initLimit; unidad ticks
+9,zookeeper,3.9,maxTimeToWaitForEpoch,NO_ENCONTRADO,ms,,true,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,doc no fija default; sugiere ~2s en cross-DC
+10,zookeeper,3.9,fsync.warningthresholdms,1000,ms,1000,false,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,"monitoreo, no aborta operacion; REVISAR_ALCANCE"
+11,zookeeper,3.9,requestThrottleStallTime,100,ms,100,false,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,control de admision; REVISAR clasificacion
+12,zookeeper,3.9,zookeeper.request_throttler.shutdownTimeout,10000,ms,10000,false,SHUTDOWN,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,
+13,zookeeper,3.9,multiAddress.reachabilityCheckTimeoutMs,1000,ms,1000,false,CONNECT,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,solo si multiAddress.enabled=true
+14,zookeeper,3.9,observer.reconnectDelayMs,0,ms,,true,RETRY_BACKOFF,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,0 => sin espera (especial)
+15,zookeeper,3.9,observer.election.DelayMs,200,ms,200,false,LEASE_ELECTION,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,
+16,zookeeper,3.9,connectionFreezeTime,-1,ms,,true,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,-1 => throttling deshabilitado (especial); REVISAR_ALCANCE
+17,zookeeper,3.9,connectionTokenFillTime,1,ms,1,false,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,"rate limiting, no timeout de red; REVISAR_ALCANCE"
+18,zookeeper,3.9,flushDelay,0,ms,,true,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,0 => deshabilitado (especial); REVISAR_ALCANCE
+19,zookeeper,3.9,maxWriteQueuePollTime,flushDelay/3,ms,,true,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,default relativo a flushDelay; deshabilitado si flushDelay=0
+20,zookeeper,3.9,watcherCleanIntervalInSeconds,10,min,600000,false,OTRO,https://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_configuration,doc dice '10 minutes'; nombre implica seg (600); periodico -> REVISAR_ALCANCE
+21,tomcat,9.0,connectionTimeout,60000,ms,60000,false,READ_SOCKET,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,-1 => infinito; ref config del server usa 60000
+22,tomcat,9.0,keepAliveTimeout,connectionTimeout,ms,,true,IDLE,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,default = valor de connectionTimeout (relativo)
+23,tomcat,9.0,asyncTimeout,30000,ms,30000,false,REQUEST_RPC,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,
+24,tomcat,9.0,connectionUploadTimeout,300000,ms,300000,false,READ_SOCKET,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,
+25,tomcat,9.0,connectionLinger,-1,s,,true,SHUTDOWN,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,-1 => linger deshabilitado (especial)
+26,tomcat,9.0,socket.soLingerTime,NO_ENCONTRADO,s,,true,SHUTDOWN,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,sin default propio; equivale a connectionLinger
+27,tomcat,9.0,socket.soTimeout,connectionTimeout,ms,,true,READ_SOCKET,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,sin default propio; equivale a connectionTimeout
+28,tomcat,9.0,selectorTimeout,1000,ms,1000,false,IDLE,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,
+29,tomcat,9.0,socket.unlockTimeout,250,ms,250,false,SHUTDOWN,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,
+30,tomcat,9.0,pollTime,2000,microsegundos,,false,OTRO,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,unidad microsegundos -> normalizar.py la marcara pendiente
+31,tomcat,9.0,threadsMaxIdleTime,60000,ms,60000,false,IDLE,https://tomcat.apache.org/tomcat-9.0-doc/config/http.html,
+32,kafka,3.9,zookeeper.session.timeout.ms,18000,ms,18000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_zookeeper.session.timeout.ms,broker
+33,kafka,3.9,zookeeper.connection.timeout.ms,null,ms,,true,CONNECT,https://kafka.apache.org/documentation/#brokerconfigs_zookeeper.connection.timeout.ms,broker; null => usa zookeeper.session.timeout.ms
+34,kafka,3.9,connections.max.idle.ms,600000,ms,600000,false,IDLE,https://kafka.apache.org/documentation/#brokerconfigs_connections.max.idle.ms,broker
+35,kafka,3.9,request.timeout.ms,30000,ms,30000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_request.timeout.ms,broker; inter-broker
+36,kafka,3.9,replica.socket.timeout.ms,30000,ms,30000,false,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_replica.socket.timeout.ms,broker
+37,kafka,3.9,replica.fetch.wait.max.ms,500,ms,500,false,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_replica.fetch.wait.max.ms,broker; max espera por fetch del follower
+38,kafka,3.9,replica.lag.time.max.ms,30000,ms,30000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_replica.lag.time.max.ms,broker; liveness ISR; REVISAR clasificacion
+39,kafka,3.9,replica.fetch.backoff.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_replica.fetch.backoff.ms,broker
+40,kafka,3.9,controller.socket.timeout.ms,30000,ms,30000,false,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_controller.socket.timeout.ms,broker
+41,kafka,3.9,controller.quorum.election.timeout.ms,1000,ms,1000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.election.timeout.ms,broker
+42,kafka,3.9,controller.quorum.fetch.timeout.ms,2000,ms,2000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.fetch.timeout.ms,broker
+43,kafka,3.9,controller.quorum.election.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.election.backoff.max.ms,broker
+44,kafka,3.9,controller.quorum.request.timeout.ms,2000,ms,2000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.request.timeout.ms,broker
+45,kafka,3.9,controller.quorum.retry.backoff.ms,20,ms,20,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.retry.backoff.ms,broker
+46,kafka,3.9,controller.quorum.append.linger.ms,25,ms,25,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_controller.quorum.append.linger.ms,broker; linger de batching; REVISAR
+47,kafka,3.9,group.initial.rebalance.delay.ms,3000,ms,3000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_group.initial.rebalance.delay.ms,broker; retraso de coordinacion de rebalanceo
+48,kafka,3.9,group.min.session.timeout.ms,6000,ms,6000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.min.session.timeout.ms,broker
+49,kafka,3.9,group.max.session.timeout.ms,1800000,ms,1800000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.max.session.timeout.ms,broker
+50,kafka,3.9,group.consumer.session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.session.timeout.ms,broker
+51,kafka,3.9,group.consumer.min.session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.min.session.timeout.ms,broker
+52,kafka,3.9,group.consumer.max.session.timeout.ms,60000,ms,60000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.max.session.timeout.ms,broker
+53,kafka,3.9,group.consumer.heartbeat.interval.ms,5000,ms,5000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.heartbeat.interval.ms,broker
+54,kafka,3.9,group.consumer.min.heartbeat.interval.ms,5000,ms,5000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.min.heartbeat.interval.ms,broker
+55,kafka,3.9,group.consumer.max.heartbeat.interval.ms,15000,ms,15000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.consumer.max.heartbeat.interval.ms,broker
+56,kafka,3.9,group.share.session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.session.timeout.ms,broker
+57,kafka,3.9,group.share.min.session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.min.session.timeout.ms,broker
+58,kafka,3.9,group.share.max.session.timeout.ms,60000,ms,60000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.max.session.timeout.ms,broker
+59,kafka,3.9,group.share.heartbeat.interval.ms,5000,ms,5000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.share.heartbeat.interval.ms,broker
+60,kafka,3.9,group.share.min.heartbeat.interval.ms,5000,ms,5000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.share.min.heartbeat.interval.ms,broker
+61,kafka,3.9,group.share.max.heartbeat.interval.ms,15000,ms,15000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_group.share.max.heartbeat.interval.ms,broker
+62,kafka,3.9,group.share.record.lock.duration.ms,30000,ms,30000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.record.lock.duration.ms,broker; lock de adquisicion de registros
+63,kafka,3.9,group.share.min.record.lock.duration.ms,15000,ms,15000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.min.record.lock.duration.ms,broker
+64,kafka,3.9,group.share.max.record.lock.duration.ms,60000,ms,60000,false,LEASE_ELECTION,https://kafka.apache.org/documentation/#brokerconfigs_group.share.max.record.lock.duration.ms,broker
+65,kafka,3.9,group.coordinator.append.linger.ms,10,ms,10,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_group.coordinator.append.linger.ms,broker; linger de batching; REVISAR
+66,kafka,3.9,transaction.max.timeout.ms,900000,ms,900000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_transaction.max.timeout.ms,broker; vida maxima de transaccion; REVISAR
+67,kafka,3.9,offsets.commit.timeout.ms,5000,ms,5000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_offsets.commit.timeout.ms,broker
+68,kafka,3.9,connections.max.reauth.ms,0,ms,,true,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_connections.max.reauth.ms,broker; 0 => deshabilitado
+69,kafka,3.9,controlled.shutdown.retry.backoff.ms,5000,ms,5000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_controlled.shutdown.retry.backoff.ms,broker; backoff dentro de apagado controlado
+70,kafka,3.9,broker.heartbeat.interval.ms,2000,ms,2000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#brokerconfigs_broker.heartbeat.interval.ms,broker; KRaft
+71,kafka,3.9,broker.session.timeout.ms,9000,ms,9000,false,SESSION,https://kafka.apache.org/documentation/#brokerconfigs_broker.session.timeout.ms,broker; lease de broker en KRaft
+72,kafka,3.9,initial.broker.registration.timeout.ms,60000,ms,60000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#brokerconfigs_initial.broker.registration.timeout.ms,broker; registro inicial en el quorum
+73,kafka,3.9,remote.fetch.max.wait.ms,500,ms,500,false,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_remote.fetch.max.wait.ms,broker; tiered storage
+74,kafka,3.9,socket.connection.setup.timeout.ms,10000,ms,10000,false,CONNECT,https://kafka.apache.org/documentation/#brokerconfigs_socket.connection.setup.timeout.ms,broker
+75,kafka,3.9,socket.connection.setup.timeout.max.ms,30000,ms,30000,false,CONNECT,https://kafka.apache.org/documentation/#brokerconfigs_socket.connection.setup.timeout.max.ms,broker
+76,kafka,3.9,connection.failed.authentication.delay.ms,100,ms,100,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_connection.failed.authentication.delay.ms,broker; retraso de cierre tras fallo de auth
+77,kafka,3.9,log.dir.failure.timeout.ms,30000,ms,30000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.dir.failure.timeout.ms,broker; deteccion de fallo de log dir
+78,kafka,3.9,sasl.login.connect.timeout.ms,null,ms,,true,CONNECT,https://kafka.apache.org/documentation/#brokerconfigs_sasl.login.connect.timeout.ms,broker; OAUTHBEARER; null=sin timeout
+79,kafka,3.9,sasl.login.read.timeout.ms,null,ms,,true,READ_SOCKET,https://kafka.apache.org/documentation/#brokerconfigs_sasl.login.read.timeout.ms,broker; OAUTHBEARER; null=sin timeout
+80,kafka,3.9,sasl.login.retry.backoff.ms,100,ms,100,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_sasl.login.retry.backoff.ms,broker
+81,kafka,3.9,sasl.login.retry.backoff.max.ms,10000,ms,10000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_sasl.login.retry.backoff.max.ms,broker
+82,kafka,3.9,sasl.oauthbearer.jwks.endpoint.retry.backoff.ms,100,ms,100,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_sasl.oauthbearer.jwks.endpoint.retry.backoff.ms,broker
+83,kafka,3.9,sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms,10000,ms,10000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#brokerconfigs_sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms,broker
+84,kafka,3.9,sasl.oauthbearer.jwks.endpoint.refresh.ms,3600000,ms,3600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_sasl.oauthbearer.jwks.endpoint.refresh.ms,broker; intervalo refresco JWKS; REVISAR_ALCANCE
+85,kafka,3.9,delegation.token.expiry.check.interval.ms,3600000,ms,3600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_delegation.token.expiry.check.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+86,kafka,3.9,delegation.token.expiry.time.ms,86400000,ms,86400000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_delegation.token.expiry.time.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+87,kafka,3.9,delegation.token.max.lifetime.ms,604800000,ms,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_delegation.token.max.lifetime.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+88,kafka,3.9,log.cleaner.backoff.ms,15000,ms,15000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.cleaner.backoff.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+89,kafka,3.9,log.cleaner.delete.retention.ms,86400000,ms,86400000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.cleaner.delete.retention.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+90,kafka,3.9,log.cleaner.max.compaction.lag.ms,9223372036854775807,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.cleaner.max.compaction.lag.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+91,kafka,3.9,log.cleaner.min.compaction.lag.ms,0,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.cleaner.min.compaction.lag.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+92,kafka,3.9,log.flush.interval.ms,null,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.flush.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+93,kafka,3.9,log.flush.offset.checkpoint.interval.ms,60000,ms,60000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.flush.offset.checkpoint.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+94,kafka,3.9,log.flush.scheduler.interval.ms,9223372036854775807,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.flush.scheduler.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+95,kafka,3.9,log.flush.start.offset.checkpoint.interval.ms,60000,ms,60000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.flush.start.offset.checkpoint.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+96,kafka,3.9,log.local.retention.ms,-2,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.local.retention.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+97,kafka,3.9,log.retention.check.interval.ms,300000,ms,300000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.retention.check.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+98,kafka,3.9,log.retention.hours,168,h,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.retention.hours,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+99,kafka,3.9,log.retention.minutes,null,min,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.retention.minutes,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+100,kafka,3.9,log.retention.ms,null,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.retention.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+101,kafka,3.9,log.roll.jitter.ms,null,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.roll.jitter.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+102,kafka,3.9,log.roll.ms,null,ms,,true,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.roll.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+103,kafka,3.9,log.segment.delete.delay.ms,60000,ms,60000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_log.segment.delete.delay.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+104,kafka,3.9,metadata.log.max.snapshot.interval.ms,3600000,ms,3600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_metadata.log.max.snapshot.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+105,kafka,3.9,metadata.log.segment.ms,604800000,ms,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_metadata.log.segment.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+106,kafka,3.9,metadata.max.idle.interval.ms,500,ms,500,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_metadata.max.idle.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+107,kafka,3.9,metadata.max.retention.ms,604800000,ms,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_metadata.max.retention.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+108,kafka,3.9,offsets.retention.check.interval.ms,600000,ms,600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_offsets.retention.check.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+109,kafka,3.9,offsets.retention.minutes,10080,min,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_offsets.retention.minutes,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+110,kafka,3.9,producer.id.expiration.ms,86400000,ms,86400000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_producer.id.expiration.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+111,kafka,3.9,remote.log.manager.task.interval.ms,30000,ms,30000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_remote.log.manager.task.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+112,kafka,3.9,replica.high.watermark.checkpoint.interval.ms,5000,ms,5000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_replica.high.watermark.checkpoint.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+113,kafka,3.9,transaction.abort.timed.out.transaction.cleanup.interval.ms,10000,ms,10000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_transaction.abort.timed.out.transaction.cleanup.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+114,kafka,3.9,transaction.remove.expired.transaction.cleanup.interval.ms,3600000,ms,3600000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_transaction.remove.expired.transaction.cleanup.interval.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+115,kafka,3.9,transactional.id.expiration.ms,604800000,ms,604800000,false,OTRO,https://kafka.apache.org/documentation/#brokerconfigs_transactional.id.expiration.ms,broker; REVISAR_ALCANCE: periodico/retencion (protocolo 2.bis)
+116,kafka,3.9,request.timeout.ms,30000,ms,30000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#producerconfigs_request.timeout.ms,producer
+117,kafka,3.9,delivery.timeout.ms,120000,ms,120000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#producerconfigs_delivery.timeout.ms,producer; cota extremo a extremo de send()
+118,kafka,3.9,linger.ms,0,ms,,true,OTRO,https://kafka.apache.org/documentation/#producerconfigs_linger.ms,producer; linger de batching; 0=sin espera
+119,kafka,3.9,connections.max.idle.ms,540000,ms,540000,false,IDLE,https://kafka.apache.org/documentation/#producerconfigs_connections.max.idle.ms,producer
+120,kafka,3.9,max.block.ms,60000,ms,60000,false,OTRO,https://kafka.apache.org/documentation/#producerconfigs_max.block.ms,producer; bloqueo de send()/metadata/buffer
+121,kafka,3.9,transaction.timeout.ms,60000,ms,60000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#producerconfigs_transaction.timeout.ms,producer
+122,kafka,3.9,socket.connection.setup.timeout.ms,10000,ms,10000,false,CONNECT,https://kafka.apache.org/documentation/#producerconfigs_socket.connection.setup.timeout.ms,producer
+123,kafka,3.9,socket.connection.setup.timeout.max.ms,30000,ms,30000,false,CONNECT,https://kafka.apache.org/documentation/#producerconfigs_socket.connection.setup.timeout.max.ms,producer
+124,kafka,3.9,reconnect.backoff.ms,50,ms,50,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#producerconfigs_reconnect.backoff.ms,producer
+125,kafka,3.9,reconnect.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#producerconfigs_reconnect.backoff.max.ms,producer
+126,kafka,3.9,retry.backoff.ms,100,ms,100,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#producerconfigs_retry.backoff.ms,producer
+127,kafka,3.9,retry.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#producerconfigs_retry.backoff.max.ms,producer
+128,kafka,3.9,partitioner.availability.timeout.ms,0,ms,,true,OTRO,https://kafka.apache.org/documentation/#producerconfigs_partitioner.availability.timeout.ms,producer; 0=deshabilitado
+129,kafka,3.9,metadata.max.age.ms,300000,ms,300000,false,OTRO,https://kafka.apache.org/documentation/#producerconfigs_metadata.max.age.ms,producer; refresco de metadata; REVISAR_ALCANCE
+130,kafka,3.9,metadata.max.idle.ms,300000,ms,300000,false,IDLE,https://kafka.apache.org/documentation/#producerconfigs_metadata.max.idle.ms,producer; cache de metadata ociosa
+131,kafka,3.9,session.timeout.ms,45000,ms,45000,false,SESSION,https://kafka.apache.org/documentation/#consumerconfigs_session.timeout.ms,consumer
+132,kafka,3.9,heartbeat.interval.ms,3000,ms,3000,false,HEARTBEAT_KEEPALIVE,https://kafka.apache.org/documentation/#consumerconfigs_heartbeat.interval.ms,consumer
+133,kafka,3.9,request.timeout.ms,30000,ms,30000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#consumerconfigs_request.timeout.ms,consumer
+134,kafka,3.9,default.api.timeout.ms,60000,ms,60000,false,REQUEST_RPC,https://kafka.apache.org/documentation/#consumerconfigs_default.api.timeout.ms,consumer; default de APIs cliente
+135,kafka,3.9,max.poll.interval.ms,300000,ms,300000,false,SESSION,https://kafka.apache.org/documentation/#consumerconfigs_max.poll.interval.ms,consumer; liveness por poll(); REVISAR
+136,kafka,3.9,fetch.max.wait.ms,500,ms,500,false,READ_SOCKET,https://kafka.apache.org/documentation/#consumerconfigs_fetch.max.wait.ms,consumer
+137,kafka,3.9,connections.max.idle.ms,540000,ms,540000,false,IDLE,https://kafka.apache.org/documentation/#consumerconfigs_connections.max.idle.ms,consumer
+138,kafka,3.9,socket.connection.setup.timeout.ms,10000,ms,10000,false,CONNECT,https://kafka.apache.org/documentation/#consumerconfigs_socket.connection.setup.timeout.ms,consumer
+139,kafka,3.9,socket.connection.setup.timeout.max.ms,30000,ms,30000,false,CONNECT,https://kafka.apache.org/documentation/#consumerconfigs_socket.connection.setup.timeout.max.ms,consumer
+140,kafka,3.9,reconnect.backoff.ms,50,ms,50,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#consumerconfigs_reconnect.backoff.ms,consumer
+141,kafka,3.9,reconnect.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#consumerconfigs_reconnect.backoff.max.ms,consumer
+142,kafka,3.9,retry.backoff.ms,100,ms,100,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#consumerconfigs_retry.backoff.ms,consumer
+143,kafka,3.9,retry.backoff.max.ms,1000,ms,1000,false,RETRY_BACKOFF,https://kafka.apache.org/documentation/#consumerconfigs_retry.backoff.max.ms,consumer
+144,kafka,3.9,metadata.max.age.ms,300000,ms,300000,false,OTRO,https://kafka.apache.org/documentation/#consumerconfigs_metadata.max.age.ms,consumer; refresco metadata; REVISAR_ALCANCE
+145,kafka,3.9,auto.commit.interval.ms,5000,ms,5000,false,OTRO,https://kafka.apache.org/documentation/#consumerconfigs_auto.commit.interval.ms,consumer; commit periodico; REVISAR_ALCANCE
+146,hdfs,stable (2026-07-29),dfs.namenode.heartbeat.recheck-interval,300000,ms,300000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+147,hdfs,stable (2026-07-29),dfs.blockreport.initialDelay,0,s,,true,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+148,hdfs,stable (2026-07-29),dfs.namenode.full.block.report.lease.length.ms,300000,ms,300000,false,LEASE_ELECTION,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+149,hdfs,stable (2026-07-29),dfs.heartbeat.interval,3,s,3000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+150,hdfs,stable (2026-07-29),dfs.namenode.decommission.interval,30,s,30000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+151,hdfs,stable (2026-07-29),dfs.namenode.decommission.monitor.class,org.apache.hadoop.hdfs.server.blockmanagement.DatanodeAdminDefaultMonitor,,,true,SHUTDOWN,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+152,hdfs,stable (2026-07-29),dfs.client.write.exclude.nodes.cache.expiry.interval.millis,600000,ms,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+153,hdfs,stable (2026-07-29),dfs.namenode.checkpoint.period,3600,s,3600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+154,hdfs,stable (2026-07-29),dfs.namenode.checkpoint.check.period,60,s,60000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+155,hdfs,stable (2026-07-29),dfs.image.transfer.timeout,60000,ms,60000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+156,hdfs,stable (2026-07-29),dfs.edit.log.transfer.timeout,30000,ms,30000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+157,hdfs,stable (2026-07-29),dfs.datanode.scan.period.hours,504,h,1814400000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+158,hdfs,stable (2026-07-29),dfs.block.scanner.volume.join.timeout.ms,5000,ms,5000,false,SHUTDOWN,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+159,hdfs,stable (2026-07-29),dfs.client.datanode-restart.timeout,30,s,30000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+160,hdfs,stable (2026-07-29),dfs.ha.log-roll.period,120,s,120000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+161,hdfs,stable (2026-07-29),dfs.ha.tail-edits.period,60,,,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+162,hdfs,stable (2026-07-29),dfs.ha.tail-edits.period.backoff-max,0,,,true,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+163,hdfs,stable (2026-07-29),dfs.ha.tail-edits.rolledits.timeout,60,s,60000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+164,hdfs,stable (2026-07-29),hadoop.fuse.connection.timeout,300,s,300000,false,CONNECT,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+165,hdfs,stable (2026-07-29),hadoop.fuse.timer.period,5,s,5000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+166,hdfs,stable (2026-07-29),dfs.namenode.metrics.logger.period.seconds,600,s,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+167,hdfs,stable (2026-07-29),dfs.datanode.metrics.logger.period.seconds,600,s,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+168,hdfs,stable (2026-07-29),dfs.client.server-defaults.validity.period.ms,3600000,ms,3600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+169,hdfs,stable (2026-07-29),dfs.namenode.retrycache.expirytime.millis,600000,ms,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+170,hdfs,stable (2026-07-29),dfs.client.mmap.cache.timeout.ms,3600000,ms,3600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+171,hdfs,stable (2026-07-29),dfs.client.mmap.retry.timeout.ms,300000,ms,300000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+172,hdfs,stable (2026-07-29),dfs.namenode.path.based.cache.retry.interval.ms,30000,ms,30000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+173,hdfs,stable (2026-07-29),dfs.webhdfs.socket.connect-timeout,60,s,60000,false,CONNECT,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+174,hdfs,stable (2026-07-29),dfs.webhdfs.socket.read-timeout,60,s,60000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+175,hdfs,stable (2026-07-29),dfs.client.read.shortcircuit.streams.cache.expiry.ms,300000,ms,300000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+176,hdfs,stable (2026-07-29),dfs.client.deadnode.detection.idle.sleep.ms,10000,ms,10000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+177,hdfs,stable (2026-07-29),dfs.client.deadnode.detection.probe.connection.timeout.ms,20000,ms,20000,false,CONNECT,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+178,hdfs,stable (2026-07-29),dfs.namenode.lease-recheck-interval-ms,2000,ms,2000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+179,hdfs,stable (2026-07-29),dfs.namenode.max-lock-hold-to-release-lease-ms,25,ms,25,false,LEASE_ELECTION,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+180,hdfs,stable (2026-07-29),dfs.namenode.startup.delay.block.deletion.sec,0,s,,true,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+181,hdfs,stable (2026-07-29),dfs.namenode.edekcacheloader.initial.delay.ms,3000,ms,3000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+182,hdfs,stable (2026-07-29),dfs.datanode.cache.revocation.timeout.ms,900000,ms,900000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+183,hdfs,stable (2026-07-29),dfs.webhdfs.ugi.expire.after.access,600000,ms,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+184,hdfs,stable (2026-07-29),dfs.client.block.write.locateFollowingBlock.initial.delay.ms,400,ms,400,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+185,hdfs,stable (2026-07-29),dfs.client.block.write.locateFollowingBlock.max.delay.ms,60000,ms,60000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+186,hdfs,stable (2026-07-29),dfs.ha.zkfc.nn.http.timeout.ms,20000,ms,20000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+187,hdfs,stable (2026-07-29),dfs.datanode.ec.reconstruction.stripedread.timeout.millis,5000,ms,5000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+188,hdfs,stable (2026-07-29),dfs.datanode.bp-ready.timeout,20,s,20000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+189,hdfs,stable (2026-07-29),dfs.balancer.block-move.timeout,0,ms,,true,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+190,hdfs,stable (2026-07-29),dfs.checksum.ec.socket-timeout,3000,ms,3000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+191,hdfs,stable (2026-07-29),dfs.client.key.provider.cache.expiry,864000000,ms,864000000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+192,hdfs,stable (2026-07-29),dfs.client.retry.interval-ms.get-last-block-length,4000,ms,4000,false,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+193,hdfs,stable (2026-07-29),dfs.client.retry.window.base,3000,ms,3000,false,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+194,hdfs,stable (2026-07-29),dfs.client.socket-timeout,60000,ms,60000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+195,hdfs,stable (2026-07-29),dfs.client.socketcache.expiryMsec,3000,ms,3000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+196,hdfs,stable (2026-07-29),dfs.datanode.restart.replica.expiration,50,s,50000,false,SESSION,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+197,hdfs,stable (2026-07-29),dfs.datanode.socket.reuse.keepalive,4000,ms,4000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+198,hdfs,stable (2026-07-29),dfs.datanode.socket.write.timeout,480000,ms,480000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+199,hdfs,stable (2026-07-29),dfs.datanode.replica.cache.expiry.time,5,min,300000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+200,hdfs,stable (2026-07-29),dfs.namenode.reconstruction.pending.timeout-sec,300,s,300000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+201,hdfs,stable (2026-07-29),dfs.storage.policy.satisfier.recheck.timeout.millis,60000,ms,60000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+202,hdfs,stable (2026-07-29),dfs.storage.policy.satisfier.self.retry.timeout.millis,300000,ms,300000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,revisar categoria (propuesta automatica no concluyente)
+203,hdfs,stable (2026-07-29),dfs.qjournal.accept-recovery.timeout.ms,120000,ms,120000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+204,hdfs,stable (2026-07-29),dfs.qjournal.finalize-segment.timeout.ms,120000,ms,120000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+205,hdfs,stable (2026-07-29),dfs.qjournal.get-journal-state.timeout.ms,120000,ms,120000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+206,hdfs,stable (2026-07-29),dfs.qjournal.new-epoch.timeout.ms,120000,ms,120000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+207,hdfs,stable (2026-07-29),dfs.qjournal.prepare-recovery.timeout.ms,120000,ms,120000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+208,hdfs,stable (2026-07-29),dfs.qjournal.select-input-streams.timeout.ms,20000,ms,20000,false,LEASE_ELECTION,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+209,hdfs,stable (2026-07-29),dfs.qjournal.start-segment.timeout.ms,20000,ms,20000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+210,hdfs,stable (2026-07-29),dfs.qjournal.write-txns.timeout.ms,20000,ms,20000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+211,hdfs,stable (2026-07-29),dfs.qjournal.http.open.timeout.ms,60000,ms,60000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+212,hdfs,stable (2026-07-29),dfs.qjournal.http.read.timeout.ms,60000,ms,60000,false,REQUEST_RPC,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+213,hdfs,stable (2026-07-29),dfs.datanode.disk.check.timeout,10,min,600000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+214,hdfs,stable (2026-07-29),dfs.qjm.operations.timeout,60,s,60000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+215,hdfs,stable (2026-07-29),dfs.namenode.lease-hard-limit-sec,1200,s,1200000,false,LEASE_ELECTION,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+216,hdfs,stable (2026-07-29),dfs.client.fsck.connect.timeout,60000,ms,60000,false,CONNECT,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+217,hdfs,stable (2026-07-29),dfs.client.fsck.read.timeout,60000,ms,60000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml,
+218,yarn,stable (2026-07-29),yarn.dispatcher.drain-events.timeout,300000,ms,300000,false,SHUTDOWN,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+219,yarn,stable (2026-07-29),yarn.am.liveness-monitor.expiry-interval-ms,600000,ms,600000,false,SESSION,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+220,yarn,stable (2026-07-29),yarn.resourcemanager.connect.retry-interval.ms,30000,ms,30000,false,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+221,yarn,stable (2026-07-29),yarn.resourcemanager.container.liveness-monitor.interval-ms,600000,ms,600000,false,SESSION,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+222,yarn,stable (2026-07-29),yarn.nm.liveness-monitor.expiry-interval-ms,600000,ms,600000,false,SESSION,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+223,yarn,stable (2026-07-29),yarn.resourcemanager.node-ip-cache.expiry-interval-secs,-1,,,true,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+224,yarn,stable (2026-07-29),yarn.resourcemanager.fs.state-store.retry-interval-ms,1000,ms,1000,false,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+225,yarn,stable (2026-07-29),yarn.resourcemanager.delayed.delegation-token.removal-interval-ms,30000,ms,30000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+226,yarn,stable (2026-07-29),yarn.resourcemanager.nodemanagers.heartbeat-interval-ms,1000,ms,1000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+227,yarn,stable (2026-07-29),yarn.resourcemanager.nodemanagers.heartbeat-interval-min-ms,1000,ms,1000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+228,yarn,stable (2026-07-29),yarn.resourcemanager.nodemanagers.heartbeat-interval-max-ms,1000,ms,1000,false,HEARTBEAT_KEEPALIVE,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+229,yarn,stable (2026-07-29),yarn.resourcemanager.delegation-token-renewer.thread-timeout,60,s,60000,false,READ_SOCKET,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+230,yarn,stable (2026-07-29),yarn.resourcemanager.delegation-token-renewer.thread-retry-interval,60,s,60000,false,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+231,yarn,stable (2026-07-29),yarn.resourcemanager.rm.container-allocation.expiry-interval-ms,600000,ms,600000,false,SESSION,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+232,yarn,stable (2026-07-29),yarn.nodemanager.container-executor.exit-code-file.timeout-ms,2000,ms,2000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+233,yarn,stable (2026-07-29),yarn.nodemanager.delete.debug-delay-sec,0,s,,true,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+234,yarn,stable (2026-07-29),yarn.log-aggregation-status.time-out.ms,600000,ms,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+235,yarn,stable (2026-07-29),yarn.nodemanager.health-checker.timeout-ms,1200000,ms,1200000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+236,yarn,stable (2026-07-29),yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms,20,ms,20,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+237,yarn,stable (2026-07-29),yarn.nodemanager.runtime.linux.runc.hdfs-manifest-to-resources-plugin.stat-cache-timeout-interval-secs,360,s,360000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+238,yarn,stable (2026-07-29),yarn.nodemanager.linux-container-executor.cgroups.delete-timeout-ms,1000,ms,1000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+239,yarn,stable (2026-07-29),yarn.nodemanager.sleep-delay-before-sigkill.ms,250,ms,250,false,SHUTDOWN,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+240,yarn,stable (2026-07-29),yarn.nodemanager.container-retry-minimum-interval-ms,1000,ms,1000,false,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+241,yarn,stable (2026-07-29),yarn.client.nodemanager-connect.retry-interval-ms,10000,ms,10000,false,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+242,yarn,stable (2026-07-29),yarn.nodemanager.resourcemanager.connect.retry-interval.ms,NO_ENCONTRADO,,,true,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+243,yarn,stable (2026-07-29),yarn.nodemanager.container-metrics.period-ms,-1,,,true,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+244,yarn,stable (2026-07-29),yarn.nodemanager.container-metrics.unregister-delay-ms,10000,ms,10000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+245,yarn,stable (2026-07-29),yarn.resourcemanager.proxy.connection.timeout,60000,,,false,CONNECT,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+246,yarn,stable (2026-07-29),yarn.timeline-service.ttl-ms,604800000,ms,604800000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+247,yarn,stable (2026-07-29),yarn.timeline-service.leveldb-timeline-store.ttl-interval-ms,300000,ms,300000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+248,yarn,stable (2026-07-29),yarn.timeline-service.client.retry-interval-ms,1000,ms,1000,false,RETRY_BACKOFF,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+249,yarn,stable (2026-07-29),yarn.timeline-service.client.drain-entities.timeout.ms,2000,ms,2000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+250,yarn,stable (2026-07-29),yarn.timeline-service.client.internal-timers-ttl-secs,420,s,420000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+251,yarn,stable (2026-07-29),yarn.timeline-service.app-collector.linger-period.ms,60000,ms,60000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+252,yarn,stable (2026-07-29),yarn.sharedcache.store.in-memory.initial-delay-mins,10,min,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+253,yarn,stable (2026-07-29),yarn.sharedcache.cleaner.period-mins,1440,min,86400000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+254,yarn,stable (2026-07-29),yarn.sharedcache.cleaner.initial-delay-mins,10,min,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+255,yarn,stable (2026-07-29),yarn.nodemanager.node-labels.provider.fetch-timeout-ms,1200000,ms,1200000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+256,yarn,stable (2026-07-29),yarn.nodemanager.node-attributes.provider.fetch-timeout-ms,1200000,ms,1200000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+257,yarn,stable (2026-07-29),yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs,3600,s,3600000,false,SHUTDOWN,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+258,yarn,stable (2026-07-29),yarn.resourcemanager.decommissioning-nodes-watcher.poll-interval-secs,20,s,20000,false,SHUTDOWN,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+259,yarn,stable (2026-07-29),yarn.federation.cache-ttl.secs,300,s,300000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+260,yarn,stable (2026-07-29),yarn.client.application-client-protocol.poll-timeout-ms,-1,,,true,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+261,yarn,stable (2026-07-29),yarn.resourcemanager.node-removal-untracked.timeout-ms,60000,ms,60000,false,SHUTDOWN,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,
+262,yarn,stable (2026-07-29),yarn.resourcemanager.application-timeouts.monitor.interval-ms,3000,ms,3000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+263,yarn,stable (2026-07-29),yarn.nodemanager.elastic-memory-control.timeout-sec,5,s,5000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,revisar categoria (propuesta automatica no concluyente)
+264,yarn,stable (2026-07-29),yarn.resourcemanager.activities-manager.scheduler-activities.ttl-ms,600000,ms,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+265,yarn,stable (2026-07-29),yarn.resourcemanager.activities-manager.app-activities.ttl-ms,600000,ms,600000,false,OTRO,https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+266,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.master.logcleaner.ttl,600000,ms,600000,false,OTRO,https://hbase.apache.org/book.html#hbase.master.logcleaner.ttl,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+267,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.master.fileSplitTimeout,600000,,,false,OTRO,https://hbase.apache.org/book.html#hbase.master.fileSplitTimeout,revisar categoria (propuesta automatica no concluyente)
+268,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.regionserver.logroll.period,3600000,,,false,OTRO,https://hbase.apache.org/book.html#hbase.regionserver.logroll.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+269,hbase,"2.x (Reference Guide, 2026-07-29)",zookeeper.session.timeout,90000,ms,90000,false,SESSION,https://hbase.apache.org/book.html#zookeeper.session.timeout,
+270,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.client.scanner.timeout.period,60000,ms,60000,false,OTRO,https://hbase.apache.org/book.html#hbase.client.scanner.timeout.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+271,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.balancer.period,300000,ms,300000,false,OTRO,https://hbase.apache.org/book.html#hbase.balancer.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+272,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.master.oldwals.dir.updater.period,300000,ms,300000,false,OTRO,https://hbase.apache.org/book.html#hbase.master.oldwals.dir.updater.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+273,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.normalizer.period,300000,ms,300000,false,OTRO,https://hbase.apache.org/book.html#hbase.normalizer.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+274,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.rpc.timeout,60000,ms,60000,false,REQUEST_RPC,https://hbase.apache.org/book.html#hbase.rpc.timeout,
+275,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.client.operation.timeout,1200000,ms,1200000,false,REQUEST_RPC,https://hbase.apache.org/book.html#hbase.client.operation.timeout,
+276,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.rpc.shortoperation.timeout,10000,,,false,REQUEST_RPC,https://hbase.apache.org/book.html#hbase.rpc.shortoperation.timeout,
+277,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.lease.recovery.timeout,900000,,,false,LEASE_ELECTION,https://hbase.apache.org/book.html#hbase.lease.recovery.timeout,
+278,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.lease.recovery.dfs.timeout,64000,,,false,LEASE_ELECTION,https://hbase.apache.org/book.html#hbase.lease.recovery.dfs.timeout,
+279,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.regionserver.storefile.refresh.period,0,ms,,true,OTRO,https://hbase.apache.org/book.html#hbase.regionserver.storefile.refresh.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+280,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.mob.cache.evict.period,3600,s,3600000,false,OTRO,https://hbase.apache.org/book.html#hbase.mob.cache.evict.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+281,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.master.mob.cleaner.period,86400,s,86400000,false,OTRO,https://hbase.apache.org/book.html#hbase.master.mob.cleaner.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+282,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.mob.compaction.chore.period,604800,s,604800000,false,OTRO,https://hbase.apache.org/book.html#hbase.mob.compaction.chore.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+283,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.snapshot.master.timeout.millis,300000,ms,300000,false,OTRO,https://hbase.apache.org/book.html#hbase.snapshot.master.timeout.millis,revisar categoria (propuesta automatica no concluyente)
+284,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.snapshot.region.timeout,300000,,,false,OTRO,https://hbase.apache.org/book.html#hbase.snapshot.region.timeout,revisar categoria (propuesta automatica no concluyente)
+285,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.master.wait.on.service.seconds,30,s,30000,false,OTRO,https://hbase.apache.org/book.html#hbase.master.wait.on.service.seconds,revisar categoria (propuesta automatica no concluyente)
+286,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.master.snapshot.ttl,0,,,true,OTRO,https://hbase.apache.org/book.html#hbase.master.snapshot.ttl,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+287,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.locality.inputstream.derive.cache.period,60000,,,false,OTRO,https://hbase.apache.org/book.html#hbase.locality.inputstream.derive.cache.period,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+288,hbase,"2.x (Reference Guide, 2026-07-29)",hbase.procedure.store.wal.periodic.roll.msec,1h (3600000 in msec),,,true,OTRO,https://hbase.apache.org/book.html#hbase.procedure.store.wal.periodic.roll.msec,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+289,cassandra,5.0,cache_load_timeout,30,s,30000,false,OTRO,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#cache_load_timeout,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+290,cassandra,5.0,native_transport_idle_timeout,60000,ms,60000,false,IDLE,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#native_transport_idle_timeout,
+291,cassandra,5.0,read_request_timeout,5000,ms,5000,false,REQUEST_RPC,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#read_request_timeout,
+292,cassandra,5.0,range_request_timeout,10000,ms,10000,false,REQUEST_RPC,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#range_request_timeout,
+293,cassandra,5.0,write_request_timeout,2000,ms,2000,false,REQUEST_RPC,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#write_request_timeout,
+294,cassandra,5.0,counter_write_request_timeout,5000,ms,5000,false,REQUEST_RPC,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#counter_write_request_timeout,
+295,cassandra,5.0,cas_contention_timeout,1000,ms,1000,false,OTRO,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#cas_contention_timeout,revisar categoria (propuesta automatica no concluyente)
+296,cassandra,5.0,truncate_request_timeout,60000,ms,60000,false,REQUEST_RPC,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#truncate_request_timeout,
+297,cassandra,5.0,request_timeout,10000,ms,10000,false,REQUEST_RPC,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#request_timeout,
+298,cassandra,5.0,internode_tcp_connect_timeout,2000,ms,2000,false,CONNECT,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#internode_tcp_connect_timeout,
+299,cassandra,5.0,internode_tcp_user_timeout,30000,ms,30000,false,OTRO,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#internode_tcp_user_timeout,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+300,cassandra,5.0,internode_streaming_tcp_user_timeout,300000,ms,300000,false,OTRO,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#internode_streaming_tcp_user_timeout,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+301,cassandra,5.0,slow_query_log_timeout,500,ms,500,false,OTRO,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#slow_query_log_timeout,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+302,cassandra,5.0,streaming_state_expires,3,d,,false,OTRO,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#streaming_state_expires,REVISAR_ALCANCE: periodico/retencion/cache (protocolo 2.bis)
+303,cassandra,5.0,denylist_initial_load_retry,5,s,5000,false,OTRO,https://cassandra.apache.org/doc/5.0/cassandra/managing/configuration/cass_yaml_file.html#denylist_initial_load_retry,revisar categoria (propuesta automatica no concluyente)
