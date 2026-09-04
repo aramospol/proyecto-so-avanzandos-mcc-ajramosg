@@ -1,41 +1,41 @@
 id,proyecto,parametro,justificacion_texto_resumen,tipo_justificacion,justificacion_url,fecha_consulta,notas
-295,cassandra,cas_contention_timeout,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-301,cassandra,slow_query_log_timeout,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-159,hdfs,dfs.client.datanode-restart.timeout,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-170,hdfs,dfs.client.mmap.cache.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-195,hdfs,dfs.client.socketcache.expiryMsec,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-152,hdfs,dfs.client.write.exclude.nodes.cache.expiry.interval.millis,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-153,hdfs,dfs.namenode.checkpoint.period,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-215,hdfs,dfs.namenode.lease-hard-limit-sec,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-178,hdfs,dfs.namenode.lease-recheck-interval-ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-207,hdfs,dfs.qjournal.prepare-recovery.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-208,hdfs,dfs.qjournal.select-input-streams.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-145,kafka,auto.commit.interval.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-76,kafka,connection.failed.authentication.delay.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-34,kafka,connections.max.idle.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-134,kafka,default.api.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-117,kafka,delivery.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-51,kafka,group.consumer.min.session.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-118,kafka,linger.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-98,kafka,log.retention.hours,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-102,kafka,log.roll.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-73,kafka,remote.fetch.max.wait.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-111,kafka,remote.log.manager.task.interval.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-116,kafka,request.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-143,kafka,retry.backoff.max.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-126,kafka,retry.backoff.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-82,kafka,sasl.oauthbearer.jwks.endpoint.retry.backoff.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-33,kafka,zookeeper.connection.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-32,kafka,zookeeper.session.timeout.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-28,tomcat,selectorTimeout,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-27,tomcat,socket.soTimeout,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-219,yarn,yarn.am.liveness-monitor.expiry-interval-ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-260,yarn,yarn.client.application-client-protocol.poll-timeout-ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-234,yarn,yarn.log-aggregation-status.time-out.ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-235,yarn,yarn.nodemanager.health-checker.timeout-ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-236,yarn,yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-261,yarn,yarn.resourcemanager.node-removal-untracked.timeout-ms,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-245,yarn,yarn.resourcemanager.proxy.connection.timeout,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-250,yarn,yarn.timeline-service.client.internal-timers-ttl-secs,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-1,zookeeper,tickTime,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
-12,zookeeper,zookeeper.request_throttler.shutdownTimeout,PENDIENTE,PENDIENTE,PENDIENTE,PENDIENTE,
+295,cassandra,cas_contention_timeout,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+301,cassandra,slow_query_log_timeout,"El autor sube el default de 200 a 500 ms y lo explica sin medicion: ""I know this is very high but I prefer to be on the safe side"".",HEURISTICA,https://issues.apache.org/jira/browse/CASSANDRA-12403,2026-08-20,"PRELIMINAR. Comentario de 2016-08-10 en el hilo que introduce la deteccion de consultas lentas. Razonamiento explicito, sin datos que lo respalden."
+159,hdfs,dfs.client.datanode-restart.timeout,La incidencia que introduce el parametro declara el default de 30 s sin dar ninguna razon del numero.,ARBITRARIO,https://issues.apache.org/jira/browse/HDFS-5924,2026-08-20,PRELIMINAR. Comentario de 2014-02-25: 'By default dfs.client.datanode-restart.timeout is 30 seconds'. RQ4: HDFS-13889 documenta que escribirlo como '30s' rompe la compatibilidad entre clientes Hadoop 3 y clusteres Hadoop 2 (NumberFormatException).
+170,hdfs,dfs.client.mmap.cache.timeout.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+195,hdfs,dfs.client.socketcache.expiryMsec,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+152,hdfs,dfs.client.write.exclude.nodes.cache.expiry.interval.millis,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+153,hdfs,dfs.namenode.checkpoint.period,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+215,hdfs,dfs.namenode.lease-hard-limit-sec,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+178,hdfs,dfs.namenode.lease-recheck-interval-ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+207,hdfs,dfs.qjournal.prepare-recovery.timeout.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+208,hdfs,dfs.qjournal.select-input-streams.timeout.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+145,kafka,auto.commit.interval.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+76,kafka,connection.failed.authentication.delay.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+34,kafka,connections.max.idle.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor. RQ4: KAFKA-2078 atribuye fallos de cliente al cierre de conexiones ociosas a los 10 minutos por defecto (https://issues.apache.org/jira/browse/KAFKA-2078). RQ4: KAFKA-2078 atribuye fallos de cliente al cierre de conexiones ociosas a los 10 minutos por defecto (https://issues.apache.org/jira/browse/KAFKA-2078)."
+134,kafka,default.api.timeout.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+117,kafka,delivery.timeout.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+51,kafka,group.consumer.min.session.timeout.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+118,kafka,linger.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+98,kafka,log.retention.hours,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+102,kafka,log.roll.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+73,kafka,remote.fetch.max.wait.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+111,kafka,remote.log.manager.task.interval.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+116,kafka,request.timeout.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+143,kafka,retry.backoff.max.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+126,kafka,retry.backoff.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor. RQ4: KAFKA-899 recomienda como remedio subir el default de 100 ms a 1000 ms (https://issues.apache.org/jira/browse/KAFKA-899). RQ4: KAFKA-899 recomienda como remedio subir el default de 100 ms a 1000 ms (https://issues.apache.org/jira/browse/KAFKA-899)."
+82,kafka,sasl.oauthbearer.jwks.endpoint.retry.backoff.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+33,kafka,zookeeper.connection.timeout.ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+32,kafka,zookeeper.session.timeout.ms,"KIP-537 sube el default de 6 a 18 s razonando el cambio de entorno: el valor viejo servia para centros de datos controlados, pero en nubes inestables produce expiraciones espurias. Justifica el sentido del cambio por experiencia operativa, no con mediciones, y no explica por que 18.",HEURISTICA,https://cwiki.apache.org/confluence/display/KAFKA/KIP-537%3A+Increase+default+zookeeper+session+timeout,2026-08-20,"PRELIMINAR. PRELIMINAR. Cita: 'The tradeoff with a larger session timeout is that it allows the system to smooth over transient instability at the cost of slower detection of genuine failures. Based on our experience, genuine failures are rare...'. Implementado en KAFKA-9102 (https://issues.apache.org/jira/browse/KAFKA-9102), commit 4bde9bb3."
+28,tomcat,selectorTimeout,El commit que fija el default en la doc (1000 ms) solo lo declara; ni el mensaje ni el cambio dan una razon del numero.,ARBITRARIO,https://github.com/apache/tomcat/commit/c9772ad6,2026-08-20,PRELIMINAR. Commit de 2007-05-18. El valor ya existia en el codigo; no se localizo el commit que lo introdujo.
+27,tomcat,socket.soTimeout,"El valor no es propio: la doc declara que equivale a connectionTimeout, y un commit posterior renombra soTimeout a connectionTimeout por consistencia.",HERENCIA,https://github.com/apache/tomcat/commit/712bcbcf,2026-08-20,PRELIMINAR. Commit de 2016-10-31.
+219,yarn,yarn.am.liveness-monitor.expiry-interval-ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+260,yarn,yarn.client.application-client-protocol.poll-timeout-ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+234,yarn,yarn.log-aggregation-status.time-out.ms,"El valor solo aparece en una revision de consistencia de yarn-default.xml, que corrige la documentacion sin justificar el numero.",ARBITRARIO,https://issues.apache.org/jira/browse/YARN-3069,2026-08-20,"PRELIMINAR. Comentario de 2015-06-16: 'The default value is 600000, not 60000'. RQ4: la incidencia existe porque la documentacion contradecia al codigo."
+235,yarn,yarn.nodemanager.health-checker.timeout-ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+236,yarn,yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+261,yarn,yarn.resourcemanager.node-removal-untracked.timeout-ms,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+245,yarn,yarn.resourcemanager.proxy.connection.timeout,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+250,yarn,yarn.timeline-service.client.internal-timers-ttl-secs,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+1,zookeeper,tickTime,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."
+12,zookeeper,zookeeper.request_throttler.shutdownTimeout,NO_ENCONTRADO,NO_ENCONTRADO,NO_ENCONTRADO,2026-08-20,"PRELIMINAR. Las incidencias que mencionan el parametro lo usan o lo reportan, ninguna explica de donde sale el valor."

@@ -49,13 +49,13 @@ FIGURAS = SALIDA / "figuras"
 # Categorias del corpus (protocolo 3.4). Se declaran aqui para que la figura por
 # categoria sea trazable al protocolo y no a una agrupacion improvisada.
 CATEGORIA = {
-    "zookeeper": "Coordinacion", "curator": "Coordinacion",
-    "kafka": "Mensajeria", "activemq": "Mensajeria",
+    "zookeeper": "Coordinación", "curator": "Coordinación",
+    "kafka": "Mensajería", "activemq": "Mensajería",
     "cassandra": "Bases de datos", "hbase": "Bases de datos",
     "hdfs": "Proc./almacenamiento", "yarn": "Proc./almacenamiento",
     "dubbo": "RPC",
     "tomcat": "Web",
-    "camel": "Integracion",
+    "camel": "Integración",
 }
 
 # Rampa de grises. Validada con el validador del skill dataviz: separacion CVD y
@@ -115,7 +115,7 @@ def eje_log_ms(ax) -> None:
     ax.xaxis.set_major_formatter(FuncFormatter(lambda v, _: humano(v)))
     ax.xaxis.set_minor_locator(matplotlib.ticker.LogLocator(base=10, numticks=15))
     ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
-    ax.set_xlabel("valor por defecto (escala logaritmica; unidad canonica: ms)")
+    ax.set_xlabel("valor por defecto (escala logarítmica; unidad canónica: ms)")
     ax.grid(axis="x", which="major", color="#d0d0d0", linewidth=0.6)
     ax.grid(axis="x", which="minor", color=REJILLA, linewidth=0.4)
     ax.tick_params(axis="x", which="minor", length=0)
@@ -126,8 +126,15 @@ def eje_log_ms(ax) -> None:
 
 def guardar(fig, nombre: str, pgf: bool) -> None:
     FIGURAS.mkdir(parents=True, exist_ok=True)
-    for ext in ("pdf", "png"):
-        fig.savefig(FIGURAS / f"{nombre}.{ext}")
+    # El PNG se mira suelto y conserva el titulo; el PDF va al paper, donde el
+    # titulo lo lleva el \caption y repetirlo dentro de la figura sobra.
+    fig.savefig(FIGURAS / f"{nombre}.png")
+    # Ojo: matplotlib guarda tres titulos por eje (izquierda, centro, derecha) y
+    # set_title("") solo limpia el centrado. Los titulos de aqui van con loc="left".
+    for eje in fig.axes:
+        for donde in ("left", "center", "right"):
+            eje.set_title("", loc=donde)
+    fig.savefig(FIGURAS / f"{nombre}.pdf")
     if pgf:
         try:
             fig.savefig(FIGURAS / f"{nombre}.pgf")
@@ -224,8 +231,8 @@ def figura_valores_frecuentes(normalizadas, pgf: bool, tope=12):
     for barra, n in zip(barras, valores):
         ax.text(barra.get_width() + total * 0.006, barra.get_y() + barra.get_height() / 2,
                 f"{n}  ({100 * n / total:.0f} %)", va="center", fontsize=7.5, color="#404040")
-    ax.set_xlabel(f"parametros con ese valor por defecto (n = {total} normalizados)")
-    ax.set_title("Valores por defecto mas frecuentes", loc="left", pad=8)
+    ax.set_xlabel(f"timeouts con ese valor por defecto (n = {total} normalizados)")
+    ax.set_title("Valores por defecto más frecuentes", loc="left", pad=8)
     ax.grid(axis="x", color=REJILLA, linewidth=0.5)
     ax.set_axisbelow(True)
     for lado in ("top", "right", "left"):
@@ -270,7 +277,7 @@ def figura_estado_por_proyecto(filas, pgf: bool):
             ax.text(a + b / 2, i, str(b), va="center", ha="center", fontsize=7, color="white")
         if c >= ancho_minimo:
             ax.text(a + b + c / 2, i, str(c), va="center", ha="center", fontsize=7, color="#262626")
-    ax.set_xlabel("parametros registrados")
+    ax.set_xlabel("timeouts registrados")
     ax.set_title("Estado de los valores por proyecto", loc="left", pad=8)
     ax.legend(loc="lower right", ncols=1)
     ax.grid(axis="x", color=REJILLA, linewidth=0.5)
@@ -318,7 +325,7 @@ def escribir_informe(filas, normalizadas, especiales, sin_unidad, justificacione
 
     a("## 3. Valores mas frecuentes")
     a("")
-    a("| valor | ms | parametros | % de normalizados |")
+    a("| valor | ms | timeouts | % de normalizados |")
     a("|---|---:|---:|---:|")
     for val, n in Counter(int(f["ms"]) for f in normalizadas).most_common(15):
         a(f"| {humano(val)} | {val} | {n} | {100*n/len(normalizadas):.1f} % |")
@@ -327,7 +334,7 @@ def escribir_informe(filas, normalizadas, especiales, sin_unidad, justificacione
                    if val in (1000, 2000, 3000, 5000, 10000, 15000, 20000, 30000, 60000,
                               120000, 300000, 600000, 900000, 1800000, 3600000))
     a(f"Los quince valores \"redondos\" habituales concentran **{redondos} de "
-      f"{len(normalizadas)}** parametros ({100*redondos/len(normalizadas):.0f} %).")
+      f"{len(normalizadas)}** timeouts ({100*redondos/len(normalizadas):.0f} %).")
     a("")
 
     a("## 4. Por tipo de timeout")
@@ -354,10 +361,10 @@ def escribir_informe(filas, normalizadas, especiales, sin_unidad, justificacione
     a("|---|---|---:|---:|---|")
     porcat = defaultdict(list)
     for f in normalizadas:
-        porcat[CATEGORIA.get(f["proyecto"], "sin categoria")].append(f["ms"])
+        porcat[CATEGORIA.get(f["proyecto"], "sin categoría")].append(f["ms"])
     proyectos_cat = defaultdict(set)
     for f in filas:
-        proyectos_cat[CATEGORIA.get(f["proyecto"], "sin categoria")].add(f["proyecto"])
+        proyectos_cat[CATEGORIA.get(f["proyecto"], "sin categoría")].add(f["proyecto"])
     for cat in sorted(porcat, key=lambda c: statistics.median(porcat[c])):
         s = resumen(porcat[cat])
         a(f"| {cat} | {', '.join(sorted(proyectos_cat[cat]))} | {s['n']} | "
@@ -377,7 +384,7 @@ def escribir_informe(filas, normalizadas, especiales, sin_unidad, justificacione
     a("")
     a(f"Son {len(especiales)} filas ({100*len(especiales)/total:.0f} % del dataset). "
       f"Excluirlas de las medias no las hace irrelevantes: **que uno de cada seis "
-      f"parametros venga sin limite efectivo es un resultado de RQ2**.")
+      f"timeouts venga sin limite efectivo es un resultado de RQ2**.")
     a("")
 
     # Un valor especial legitimo es 0, -1, null o una referencia a otro parametro.
@@ -391,7 +398,7 @@ def escribir_informe(filas, normalizadas, especiales, sin_unidad, justificacione
         a("Valores especiales que no son ni `0`, ni `-1`, ni `null`, ni una referencia")
         a("limpia a otro parametro. Cada una necesita una decision humana:")
         a("")
-        a("| id | proyecto | parametro | valor_original | que parece |")
+        a("| id | proyecto | timeout | valor_original | que parece |")
         a("|---:|---|---|---|---|")
         for f in sorted(sospechosas, key=lambda x: int(x["id"])):
             v = f["valor_original"]
@@ -405,7 +412,7 @@ def escribir_informe(filas, normalizadas, especiales, sin_unidad, justificacione
                 diagnostico = "expresado en funcion de otro parametro: correcto dejarlo fuera"
             else:
                 diagnostico = "revisar a mano"
-            a(f"| {f['id']} | {f['proyecto']} | `{f['parametro']}` | `{v}` | {diagnostico} |")
+            a(f"| {f['id']} | {f['proyecto']} | `{f['timeout']}` | `{v}` | {diagnostico} |")
         a("")
 
     a("## 7. Justificaciones (RQ3)")
@@ -421,7 +428,7 @@ def escribir_informe(filas, normalizadas, especiales, sin_unidad, justificacione
     a("## 8. Que falta para que estas cifras sean definitivas")
     a("")
     a("1. Resolver la categoria `OTRO` y congelar el codebook v1 (afecta la seccion 4).")
-    a("2. Fijar la regla de la unidad de analisis para parametros documentados en")
+    a("2. Fijar la regla de la unidad de analisis para timeouts documentados en")
     a("   varias superficies (Kafka tiene 9 nombres repetidos; ver protocolo 2.bis).")
     a("3. Completar la busqueda de justificaciones (seccion 7).")
     a("4. Decidir las 12 filas sin unidad declarada: o se resuelven o se declaran.")
@@ -452,13 +459,13 @@ def main() -> int:
     for f in normalizadas:
         portipo[f["tipo_timeout"]].append(f["ms"])
     caja_por_grupo(portipo, "dist_por_tipo",
-                   "Distribucion de los valores por defecto, por tipo de timeout", args.pgf)
+                   "Distribución de los valores por defecto, por tipo de timeout", args.pgf)
 
     porcat = defaultdict(list)
     for f in normalizadas:
-        porcat[CATEGORIA.get(f["proyecto"], "sin categoria")].append(f["ms"])
+        porcat[CATEGORIA.get(f["proyecto"], "sin categoría")].append(f["ms"])
     caja_por_grupo(porcat, "dist_por_categoria",
-                   "Distribucion por categoria de proyecto", args.pgf)
+                   "Distribución por categoría de proyecto", args.pgf)
 
     figura_valores_frecuentes(normalizadas, args.pgf)
     figura_estado_por_proyecto(filas, args.pgf)
